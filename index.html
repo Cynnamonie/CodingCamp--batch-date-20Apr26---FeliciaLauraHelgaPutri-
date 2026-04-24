@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Tab Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Greeting -->
+  <section id="greeting-section">
+    <div id="datetime"></div>
+    <h1 id="greeting-text"></h1>
+    <div id="name-row">
+      <span id="user-name-display"></span>
+      <button id="edit-name-btn" title="Edit name">✏️</button>
+    </div>
+    <div id="name-edit-row" class="hidden">
+      <input id="name-input" type="text" placeholder="Enter your name" maxlength="40" />
+      <button id="save-name-btn">Save</button>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Focus Timer -->
+    <section class="card" id="timer-section">
+      <h2>Focus Timer</h2>
+      <div id="timer-display">25:00</div>
+      <div id="timer-controls">
+        <button id="start-btn">Start</button>
+        <button id="stop-btn">Stop</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <div id="timer-settings">
+        <label for="pomodoro-minutes">Duration (min):</label>
+        <input id="pomodoro-minutes" type="number" min="1" max="120" value="25" />
+        <button id="apply-duration-btn">Apply</button>
+      </div>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="card" id="todo-section">
+      <h2>To-Do List</h2>
+      <div id="todo-input-row">
+        <input id="todo-input" type="text" placeholder="Add a task..." maxlength="120" />
+        <button id="add-task-btn">Add</button>
+      </div>
+      <div id="todo-sort-row">
+        <label for="sort-select">Sort:</label>
+        <select id="sort-select">
+          <option value="default">Default</option>
+          <option value="active">Active first</option>
+          <option value="done">Done first</option>
+        </select>
+      </div>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="card" id="links-section">
+      <h2>Quick Links</h2>
+      <div id="links-input-row">
+        <input id="link-name-input" type="text" placeholder="Label" maxlength="30" />
+        <input id="link-url-input" type="url" placeholder="https://..." maxlength="200" />
+        <button id="add-link-btn">Add</button>
+      </div>
+      <div id="links-grid"></div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
