@@ -3,6 +3,7 @@
    ════════════════════════════════════════ */
 
 // ── Storage helpers ──────────────────────
+alert("JS nyala!");
 const store = {
   get: (key, fallback) => {
     try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
